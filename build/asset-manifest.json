@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/navicam/static/css/main.bcfd38fd.css",
+    "main.js": "/navicam/static/js/main.467e95c8.js",
+    "static/media/lightbulb.png": "/navicam/static/media/lightbulb.e4c8a47a5e9660cb08e0.png",
+    "index.html": "/navicam/index.html",
+    "main.bcfd38fd.css.map": "/navicam/static/css/main.bcfd38fd.css.map",
+    "main.467e95c8.js.map": "/navicam/static/js/main.467e95c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bcfd38fd.css",
+    "static/js/main.467e95c8.js"
+  ]
+}
