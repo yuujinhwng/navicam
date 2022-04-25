@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/navicam/static/css/main.2300110b.css",
+    "main.js": "/navicam/static/js/main.54e44c82.js",
+    "index.html": "/navicam/index.html",
+    "main.2300110b.css.map": "/navicam/static/css/main.2300110b.css.map",
+    "main.54e44c82.js.map": "/navicam/static/js/main.54e44c82.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2300110b.css",
+    "static/js/main.54e44c82.js"
+  ]
+}
