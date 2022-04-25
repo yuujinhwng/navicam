@@ -32,15 +32,18 @@
   height: 100%;
   display: flex;
   align-items: center;
+  padding-top: 50px;
+  padding-bottom: 80px;
   background-color: rgba(0, 0, 0);
   transition: 0.4s;
+  justify-content: center;
   
 }
 
 .result.hasPhoto{
   left: 0;
-}
 
+}
 video {
   min-width: 100%;
   min-height: 100%;
@@ -50,7 +53,7 @@ video {
   left: 50%;
   object-fit: cover;
   padding-top: 50px;
-  padding-bottom: 110px;
+  padding-bottom: 80px;
   transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg);
   
@@ -58,7 +61,7 @@ video {
 
 #takePhoto {
   position: absolute;
-  bottom: 28px;
+  bottom: 10px;
   left: 50%;
 
   display:block;
@@ -79,7 +82,29 @@ video {
 
 #closePhoto {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
+  left: 20%;
+
+  display:block;
+  height: 60px;
+  width: 60px;
+  appearance: none;
+  border: none;
+  outline: none;
+
+  padding: 8px 16px;
+  background-image: linear-gradient(to right, #FFFFFF 50%, rgb(0, 0, 0) 50%);
+  background-position: 0%;
+  background-size: 200%;
+  font-size: 40px;
+  font-style: #000000;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#send {
+  position: absolute;
+  bottom: 30px;
   left: 50%;
 
   display:block;
@@ -89,7 +114,6 @@ video {
   border: none;
   outline: none;
 
-  border-radius: 50%;
   padding: 8px 16px;
   background-image: linear-gradient(to right, #FFFFFF 50%, rgb(0, 0, 0) 50%);
   background-position: 0%;
@@ -97,52 +121,46 @@ video {
   transition: 0.4s;
   cursor: pointer;
 }
-.lower {
-  display: inline-block;
-}
-#send {
-  position: absolute;
-  bottom: 20px;
 
-  display:block;
-  height: 60px;
-  width: 60px;
-  appearance: none;
-  border: none;
-  outline: none;
-
-  border-radius: 50%;
-  padding: 8px 16px;
-  background-image: linear-gradient(to right, #FFFFFF 50%, rgb(0, 0, 0) 50%);
-  background-position: 0%;
-  background-size: 200%;
-  transition: 0.4s;
-  cursor: pointer;
-}
 .upper {
+  
   display: inline-block;
+  font-size: calc(0.5rem + 1vw);
+  align-items: center;
 }
 #info {
-  float: right;
   position: absolute;
   top: 10px;
-  right:40px;
+  right:5%;
   padding: 2px 5px;
+  transition: 0.4s;
+  cursor: pointer;
+  background-position: 0%;
+  background-size: 200%;
+  z-index:10;
 }
 
 #upload {
+  
   position: absolute;
-  float: left;
-  left: 280px;
+  right:60%;
+  margin-left: 10px;
+  margin-right: 10px;
   top: 10px;
   padding: 2px 5px;
+  transition: 0.4s;
+  cursor: pointer;
+  z-index:10;
 }
+
 
 #file {
   position: absolute;
   top: 10px;
-  left: 40px;
-
+  right: 60%;
+  transition: 0.4s;
+  cursor: pointer;
+  z-index:10;
 }
 
 
@@ -156,6 +174,9 @@ canvas {
   height: auto;
   padding-top: 50px;
   padding-bottom: 80px;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
   transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg);
 }
