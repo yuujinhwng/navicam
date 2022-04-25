@@ -8,7 +8,7 @@
 .App {
   min-height: 100vh;
   position: relative;
-  background-color: #313131;
+  background-color: #000000;
 }
 
 .camera{
@@ -32,14 +32,13 @@
   height: 100%;
   display: flex;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0);
   transition: 0.4s;
   
 }
 
 .result.hasPhoto{
   left: 0;
-  
 }
 
 video {
@@ -51,7 +50,7 @@ video {
   left: 50%;
   object-fit: cover;
   padding-top: 50px;
-  padding-bottom: 80px;
+  padding-bottom: 110px;
   transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg);
   
@@ -59,7 +58,7 @@ video {
 
 #takePhoto {
   position: absolute;
-  bottom: 0px;
+  bottom: 28px;
   left: 50%;
 
   display:block;
@@ -98,10 +97,55 @@ video {
   transition: 0.4s;
   cursor: pointer;
 }
-
-.upper.button {
-  bottom: 0;
+.lower {
+  display: inline-block;
 }
+#send {
+  position: absolute;
+  bottom: 20px;
+
+  display:block;
+  height: 60px;
+  width: 60px;
+  appearance: none;
+  border: none;
+  outline: none;
+
+  border-radius: 50%;
+  padding: 8px 16px;
+  background-image: linear-gradient(to right, #FFFFFF 50%, rgb(0, 0, 0) 50%);
+  background-position: 0%;
+  background-size: 200%;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.upper {
+  display: inline-block;
+}
+#info {
+  float: right;
+  position: absolute;
+  top: 10px;
+  right:40px;
+  padding: 2px 5px;
+}
+
+#upload {
+  position: absolute;
+  float: left;
+  left: 280px;
+  top: 10px;
+  padding: 2px 5px;
+}
+
+#file {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+
+}
+
+
 
 button:hover{
   background-position: 100%;
@@ -110,6 +154,8 @@ button:hover{
 canvas {
   width: 100%;
   height: auto;
+  padding-top: 50px;
+  padding-bottom: 80px;
   transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg);
 }

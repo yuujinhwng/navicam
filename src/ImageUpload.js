@@ -28,9 +28,9 @@ function ImageUpload() {
 
     return (
         <div>
-            <input type="file" onChange={saveFile} />
-            <button onClick={uploadFile}>Upload</button>
-            <button onClick={information}>info</button>
+            <input id='file' type="file" onChange={saveFile} />
+            <button id='upload'onClick={uploadFile}>Upload</button>
+            <button id='info' onClick={information}>info</button>
         </div>
     );
 }

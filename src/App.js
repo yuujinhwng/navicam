@@ -73,8 +73,10 @@ function App() {
 	  	</div>
 	  	<div className={'result ' + (hasPhoto ? 'hasPhoto': '')}>
 		  	<canvas id='my-canvas' ref={photoRef}></canvas>
+		</div>
+		<div className="lower">
 		  	<button id='closePhoto' onClick ={closePhoto}></button>
-			<button onClick={sendPhoto}>SEND</button>
+			<button id='send' onClick={sendPhoto}>SEND</button>
 		</div>
 	</div>
   );
