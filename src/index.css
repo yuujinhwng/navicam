@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  position: relative;
+  background-color: #000000;
+  font-size: calc(0.5rem + 1vw);
+  justify-content: center;
+}
+
+.camera{
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.result{
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background-color: rgba(0, 0, 0);
+  transition: 0.4s;
+  justify-content: center;
+  
+}
+
+.result.hasPhoto{
+  left: 0;
+
+}
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  justify-content: center;
+  text-align: center;
+  transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+  
+}
+
+#takePhoto {
+  position: absolute;
+  bottom: 1%;
+  text-align: center;
+  display:block;
+  height: 60px;
+  width: 60px;
+  appearance: none;
+  border: none;
+  outline: none;
+
+  border-radius: 50%;
+  padding: 8px 16px;
+  background-image: linear-gradient(to right, #FFFFFF 50%, rgb(0, 0, 0) 50%);
+  background-position: 0%;
+  background-size: 200%;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#closePhoto {
+  font-size: calc(0.5rem + 1vw);
+  position: absolute;
+  bottom: 3%;
+  left: 20%;
+
+  display:block;
+  height: 30px;
+  width: 30px;
+  appearance: none;
+  border: none;
+  outline: none;
+
+  padding: 8px 16px;
+  background-color: transparent;
+  background-image: url("cancel.png");
+  background-position: 0%;
+  background-size: 100%;
+  font-size: calc(0.5rem + 1vw);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#send {
+  position: absolute;
+  bottom: 1%;
+  text-align: center;
+
+  display:block;
+  height: 30px;
+  width: 30px;
+  appearance: none;
+  border: none;
+  outline: none;
+
+  padding: 32px 32px;
+  background-color: transparent;
+  background-image: url("eye.png");
+  background-position: 0%;
+  background-size: 100%;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.upper {
+  display: inline-block;
+  font-size: calc(0.5rem + 1vw);
+  align-items: center;
+  text-align: center;
+}
+
+#info {
+  position: absolute;
+  top: 13px;
+  right:5%;
+  padding: 19px 12px 15px 8px;
+  transition: 0.4s;
+  cursor: pointer;
+  appearance: none;
+  border: 0;
+  outline: none;
+  background:transparent;
+  border-radius: 5%;
+  background-image: url("lightbulb.png");
+  background-position: 0%;
+  background-size: 20px;
+  z-index:10;
+}
+
+#upload {
+  appearance: none;
+  border: none;
+  outline: none;
+  position: absolute;
+  background-color: transparent;
+  background-image: url("upload.png");
+  background-position: 0%;
+  background-size: 30px;
+  right:60%;
+  top: 13px;
+  border-radius: 5%;
+  padding: 15px 15px;
+  transition: 0.4s;
+  cursor: pointer;
+  z-index:10;
+}
+
+
+#file {
+  appearance: none;
+  border: none;
+  outline: none;
+  position: absolute;
+  /* background-color: transparent;
+  background-image: url("file.png");
+  background-position: 0%;
+  background-size: 30px; */
+  top: 10px;
+  right: 60%;
+  margin-right: -5px;
+  transition: 0.4s;
+  cursor: pointer;
+  z-index:10;
+}
+
+
+
+button:hover{
+  background-position: 100%;
+}
+
+canvas {
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+}
