@@ -104,7 +104,7 @@ function App() {
 	  	</div>
 	  	<div className={'result ' + (hasPhoto ? 'hasPhoto': '')}>
 		  	<canvas id='my-canvas' ref={photoRef}></canvas>
-		  	<button id='closePhoto' onClick ={closePhoto}>X</button>
+		  	<button id='closePhoto' onClick ={closePhoto}></button>
 			<button id='send' onClick={sendPhoto}></button>
 			{/* <ImageComponent/> */}
 		</div>

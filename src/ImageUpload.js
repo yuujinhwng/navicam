@@ -4,7 +4,10 @@ import axios from 'axios';
 function ImageUpload() {
 
     const information = () => {
-		window.confirm("information: this is a camera contains animation to show the obfuscation process that is otherwise imperceptible to human eyes.")
+		window.confirm("Navi\nIris recognition is considered by far the most accurate modality of biometric identification. It is 1,000 times less error-prone than fingerprint.\n" +
+            "stays constant through your entire lifetime.\n\nBut this is a double-edged sword:\n\tOnce your original iris pattern is exposed, it is compromised forever.\n\t" +
+            "What if your iris template is extractable from images publicly available on the internet?\n\t" +
+            "We built a system for visually imperceptible obfuscation (i.e., an intentional destruction) of iris biometric data.")
 	}
     const [file, setFile] = useState();
     const [fileName, setFileName] = useState("");
@@ -28,7 +31,7 @@ function ImageUpload() {
 
     return (
         <div>
-            <input id='file' type="file" onChange={saveFile} />
+            <input id='file' type="file" class="hidden" onChange={saveFile} />
             <button id='upload'onClick={uploadFile}></button>
             <button id='info' onClick={information}></button>
         </div>
