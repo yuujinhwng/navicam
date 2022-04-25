@@ -31,9 +31,8 @@
   left: 100%;
   width: 100%;
   height: 100%;
-  display: flex;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 80px;
   background-color: rgba(0, 0, 0);
   transition: 0.4s;
@@ -43,7 +42,16 @@
 
 .result.hasPhoto{
   left: 0;
-
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  justify-content: center;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
 }
 video {
   min-width: 100%;
@@ -53,7 +61,7 @@ video {
   top: 50%;
   left: 50%;
   object-fit: cover;
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 80px;
   transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg);
@@ -63,7 +71,7 @@ video {
 #takePhoto {
   position: absolute;
   bottom: 1%;
-  left: 46%;
+  text-align: center;
 
   display:block;
   height: 60px;
@@ -107,7 +115,7 @@ video {
 #send {
   position: absolute;
   bottom: 3%;
-  left: 50%;
+  text-align: center;
 
   display:block;
   height: 30px;
@@ -117,9 +125,10 @@ video {
   outline: none;
 
   padding: 8px 16px;
-  background-image: linear-gradient(to right, #FFFFFF 50%, rgb(0, 0, 0) 50%);
+  background-color: transparent;
+  background-image: url("eye.png");
   background-position: 0%;
-  background-size: 200%;
+  background-size: 100%;
   transition: 0.4s;
   cursor: pointer;
 }
@@ -127,7 +136,6 @@ video {
 .upper {
 
   display: inline-block;
-  font-size: calc(0.5rem + 1vw);
   align-items: center;
 }
 
@@ -135,15 +143,18 @@ video {
   position: absolute;
   top: 10px;
   right:5%;
-  padding: 2px 5px;
+
+  padding: 20px 12px;
   transition: 0.4s;
   cursor: pointer;
   appearance: none;
   border: none;
   outline: none;
   border-radius: 5%;
+  background-color: transparent;
+  background-image: url("lightbulb.png");
   background-position: 0%;
-  background-size: auto;
+  background-size: 100%;
   z-index:10;
 }
 
@@ -155,10 +166,16 @@ video {
   right:40%;
   top: 10px;
   border-radius: 5%;
-  padding: 2px 5px;
+  background-color: transparent;
+  background-image: url("upload.png");
+  background-position: 0%;
+  background-size: 100%;
+  padding: 20px 20px;
   transition: 0.4s;
   cursor: pointer;
   z-index:10;
+
+  
 }
 
 
@@ -173,6 +190,19 @@ video {
   transition: 0.4s;
   cursor: pointer;
   z-index:10;
+
+  /* background-color: transparent;
+  background-image: url("file.png");
+  background-repeat: no repeat;
+  background-position: 0%;
+  background-size: 10%;
+  padding: 10px 5px 10px 5px; */
+
+}
+
+::-webkit-file-upload-button {
+  display: none;
+  
 }
 
 
@@ -183,12 +213,19 @@ button:hover{
 
 canvas {
   min-width: 100%;
-  min-height: 100%;
-  width: 100%;
+  min-height: 90%;
+  width: auto;
   height: auto;
   top: 50%;
   left: 50%;
+  display: flex;
   object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  background-color: #000000;
   transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg);
 }

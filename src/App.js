@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ImageUpload from "./ImageUpload";
 import axios from 'axios';
-import { axiosClient } from "use-axios-client";
+// import { axiosClient } from "use-axios-client";
 import React, { useRef, useEffect, useState } from "react";
 
 function App() {
@@ -60,34 +60,34 @@ function App() {
 		});
 	}
 
-	const ImageComponent = (imageIds) => {
-		const [images, setImages] = React.useState([])
+	// const ImageComponent = (imageIds) => {
+	// 	const [images, setImages] = React.useState([])
 	  
-		React.useEffect(() => {
-		  async function getImage (id) {
-			let imageBlob
-			try {
-			  imageBlob = (await axiosClient.get(`/api/image/${id}`, { responseType: 'blob' })).data
-			} catch (err) {
-			  return null
-			}
-			return URL.createObjectURL(imageBlob)
-		  }
-		  async function getImages () {
-			const imageArray = []
-			for (const id of imageIds) {
-			  imageArray.push(await getImage(id))
-			}
-			setImages(imageArray)
-		  }
+	// 	React.useEffect(() => {
+	// 	  async function getImage (id) {
+	// 		let imageBlob
+	// 		try {
+	// 		  imageBlob = (await axiosClient.get(`/api/image/${id}`, { responseType: 'blob' })).data
+	// 		} catch (err) {
+	// 		  return null
+	// 		}
+	// 		return URL.createObjectURL(imageBlob)
+	// 	  }
+	// 	  async function getImages () {
+	// 		const imageArray = []
+	// 		for (const id of imageIds) {
+	// 		  imageArray.push(await getImage(id))
+	// 		}
+	// 		setImages(imageArray)
+	// 	  }
 	  
-		  getImages()
-		}, [imageIds])
+	// 	  getImages()
+	// 	}, [imageIds])
 	  
-		return images.map((img, i) => {
-		  return <img src={img} alt={`image-${i}`} key={i} />
-		})
-	  }
+	// 	return images.map((img, i) => {
+	// 	  return <img src={img} alt={`image-${i}`} key={i} />
+	// 	})
+	//   }
 
 	useEffect(() => {
 		getVideo();
@@ -106,7 +106,7 @@ function App() {
 		  	<canvas id='my-canvas' ref={photoRef}></canvas>
 		  	<button id='closePhoto' onClick ={closePhoto}>X</button>
 			<button id='send' onClick={sendPhoto}></button>
-			<ImageComponent/>
+			{/* <ImageComponent/> */}
 		</div>
 	</div>
   );
