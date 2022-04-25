@@ -12,13 +12,16 @@
 }
 
 .camera{
-  position: relative;
+  position: absolute;
   overflow: hidden;
   top: 0;
   bottom: 0;
   width: 100%;
   height: 100%; 
-  object-fit: contain;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  
 }
 
 .result{
@@ -46,49 +49,52 @@ video {
   height: auto;
   top: 50%;
   left: 50%;
-  object-fit: contain;
-  
+  object-fit: cover;
+  padding-top: 50px;
+  padding-bottom: 80px;
   transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg);
   
 }
 
-.camera.button{
+#takePhoto {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 0px;
+  left: 50%;
 
+  display:block;
+  height: 60px;
+  width: 60px;
   appearance: none;
   border: none;
   outline: none;
 
+  border-radius: 50%;
   padding: 8px 16px;
   background-image: linear-gradient(to right, #FFFFFF 50%, rgb(0, 0, 0) 50%);
   background-position: 0%;
   background-size: 200%;
-  color: #FFF;
-  font-size: 24px;
-  font-weight: 700;
   transition: 0.4s;
   cursor: pointer;
 }
 
-.result.button {
+#closePhoto {
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  left: 50%;
 
+  display:block;
+  height: 60px;
+  width: 60px;
   appearance: none;
   border: none;
   outline: none;
 
+  border-radius: 50%;
   padding: 8px 16px;
   background-image: linear-gradient(to right, #FFFFFF 50%, rgb(0, 0, 0) 50%);
   background-position: 0%;
   background-size: 200%;
-  color: #FFF;
-  font-size: 24px;
-  font-weight: 700;
   transition: 0.4s;
   cursor: pointer;
 }

@@ -69,11 +69,11 @@ function App() {
 		</div>
 		<div className="camera">
 			<video ref={videoRef}></video>
-		  	<button onClick ={takePhoto}> SNAP!</button>
+		  	<button id='takePhoto' onClick ={takePhoto}></button>
 	  	</div>
 	  	<div className={'result ' + (hasPhoto ? 'hasPhoto': '')}>
 		  	<canvas id='my-canvas' ref={photoRef}></canvas>
-		  	<button onClick ={closePhoto}>CLOSE!</button>
+		  	<button id='closePhoto' onClick ={closePhoto}></button>
 			<button onClick={sendPhoto}>SEND</button>
 		</div>
 	</div>
